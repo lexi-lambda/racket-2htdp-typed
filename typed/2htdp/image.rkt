@@ -156,7 +156,7 @@
 ;; derived type declarations
 ;; ---------------------------------------------------------------------------------------------------
 
-(define-type Image (U htdp:image (Instance Bitmap%))) ; TODO: missing Image-Snip% instance possibility
+(define-type Image htdp:image) ; TODO: missing Image-Snip% instance possibility
 (define-type Image-Color (U Color ColorDatabase-Color))
 (define-type Mode (U 'solid "solid" 'outline "outline" Byte))
 (define-type Angle Real) ; more specifically, Finite-NonNaN-Real, which isn't a type
