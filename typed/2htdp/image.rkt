@@ -47,7 +47,7 @@
  [add-curve (Image Real Real Angle Real Real Real Angle Real (U Pen Image-Color) -> Image)]
  [add-solid-curve (Image Real Real Angle Real Real Real Angle Real (U Pen Image-Color) -> Image)]
  [text (String Positive-Byte Image-Color -> Image)]
- [text/font (String Positive-Byte (Option String) Font-Family Font-Style Font-Weight Any -> Image)]
+ [text/font (String Positive-Byte Image-Color (Option String) Font-Family Font-Style Font-Weight Any -> Image)]
  [empty-image Image]
  ; 2.3.2 Polygons
  [triangle (Nonnegative-Real Mode (U Pen Image-Color) -> Image)]
