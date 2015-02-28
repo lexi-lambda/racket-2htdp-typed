@@ -67,9 +67,9 @@
  [star-polygon (Nonnegative-Real Positive-Integer Positive-Integer Mode (U Pen Image-Color) -> Image)]
  [radial-star (Positive-Integer Nonnegative-Real Nonnegative-Real Mode (U Pen Image-Color) -> Image)]
  [regular-polygon (Nonnegative-Real Positive-Integer Mode (U Pen Image-Color) -> Image)]
- [polygon ((Listof (Posn Real)) Mode (U Pen Image-Color) -> Image)]
- [add-polygon (Image (Listof (Posn Real)) Mode (U Pen Image-Color) -> Image)]
- [scene+polygon (Image (Listof (Posn Real)) Mode (U Pen Image-Color) -> Image)]
+ [polygon ((Listof Posn) Mode (U Pen Image-Color) -> Image)]
+ [add-polygon (Image (Listof Posn) Mode (U Pen Image-Color) -> Image)]
+ [scene+polygon (Image (Listof Posn) Mode (U Pen Image-Color) -> Image)]
  ; 2.3.3 Overlaying Images
  [overlay (Image Image Image * -> Image)]
  [overlay/align (X-Place Y-Place Image Image Image * -> Image)]
@@ -89,8 +89,8 @@
  [empty-scene ((Nonnegative-Real Nonnegative-Real) (Image-Color) . ->* . Image)]
  [place-image (Image Real Real Image -> Image)]
  [place-image/align (Image Real Real X-Place Y-Place Image -> Image)]
- [place-images ((Listof Image) (Listof (Posn Real)) Image -> Image)]
- [place-images/align ((Listof Image) (Listof (Posn Real)) X-Place Y-Place Image -> Image)]
+ [place-images ((Listof Image) (Listof Posn) Image -> Image)]
+ [place-images/align ((Listof Image) (Listof Posn) X-Place Y-Place Image -> Image)]
  [scene+line (Image Real Real Real Real (U Pen Image-Color) -> Image)]
  [scene+curve (Image Real Real Angle Real Real Real Angle Real (U Pen Image-Color) -> Image)]
  ; 2.3.5 Rotating, Scaling, Flipping, Cropping, and Framing Images
