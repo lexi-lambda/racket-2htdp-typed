@@ -5,7 +5,8 @@
 (define deps
   '("base"
     "draw-lib"
-    ("htdp-lib" #:version "1.2")
+    "htdp-lib"
     "typed-racket-lib"
     "typed-racket-more"
+    "unstable-list-lib"
     "unstable-contract-lib"))
