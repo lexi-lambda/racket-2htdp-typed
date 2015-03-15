@@ -56,6 +56,7 @@
                    #:on-tick [tick (λ (w) w)]
                    #:tick-rate [tick-rate 1/30]
                    #:tick-limit [tick-limit #f]
+                   #:on-key [key (λ (w k) w)]
                    #:on-release [release (λ (w k) w)]
                    #:on-pad [pad #f]
                    #:on-mouse [mouse (λ (w x y e) w)]
@@ -66,6 +67,7 @@
   (big-bang-cross-product
    world
    ([to-draw renderer]
+    [on-key key]
     [on-release release]
     [on-mouse mouse]
     [record? record]

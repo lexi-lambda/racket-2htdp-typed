@@ -8,6 +8,7 @@
          (only-in 2htdp/universe
                   to-draw
                   on-tick
+                  on-key
                   on-release
                   on-pad
                   on-mouse
@@ -56,6 +57,7 @@
 (provide big-bang
          to-draw
          on-tick
+         on-key
          on-release
          on-pad
          on-mouse
@@ -72,6 +74,7 @@
             [#:on-tick (World -> World)
              #:tick-rate Positive-Real
              #:tick-limit (Option Positive-Integer)
+             #:on-key (World String -> World)
              #:on-release (World String -> World)
              #:on-pad (Option (World String -> World))
              #:on-mouse (World Integer Integer Mouse-Event -> World)
@@ -93,6 +96,7 @@
                            [on-tick tick:expr tick-rate:expr tick-limit:expr])
                       #:name "on-tick clause"
                       #:defaults ([tick #f] [tick-rate #f] [tick-limit #f]))
+           (~optional [on-key key:expr] #:name "on-key clause" #:defaults ([key #f]))
            (~optional [on-release release:expr] #:name "on-release clause" #:defaults ([release #f]))
            (~optional [on-pad pad:expr] #:name "on-pad clause" #:defaults ([pad #f]))
            (~optional [on-mouse mouse:expr] #:name "on-mouse clause" #:defaults ([mouse #f]))
@@ -108,6 +112,7 @@
              (and (attribute tick) #'[#:on-tick tick])
              (and (attribute tick-rate) #'[#:tick-rate tick-rate])
              (and (attribute tick-limit) #'[#:tick-limit tick-limit])
+             (and (attribute key) #'[#:on-key key])
              (and (attribute release) #'[#:on-release release])
              (and (attribute pad) #'[#:on-pad pad])
              (and (attribute mouse) #'[#:on-mouse mouse])
