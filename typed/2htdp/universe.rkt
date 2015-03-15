@@ -88,7 +88,7 @@
   (syntax-parse stx
     #:literals (: to-draw on-tick on-key on-release on-pad on-mouse stop-when record? name)
     [(_
-      (~describe "[initial-world-state : world-state-type]"
+      (~describe "initial-world-state : world-state-type"
                  (~seq initial-state:expr : world-type:expr))
       (~or (~once [to-draw draw:expr] #:name "to-draw clause")
            (~optional (~or [on-tick tick:expr]
