@@ -5,7 +5,6 @@
 (require (for-syntax racket/base
                      racket/list
                      racket/function
-                     unstable/list
                      racket/syntax
                      syntax/parse)
          2htdp/universe)
