@@ -7,9 +7,7 @@
     "draw-lib"
     "htdp-lib"
     "typed-racket-lib"
-    "typed-racket-more"
-    "unstable-list-lib"
-    "unstable-contract-lib"))
+    "typed-racket-more"))
 (define build-deps
   '("scribble-lib"
     "racket-doc"
