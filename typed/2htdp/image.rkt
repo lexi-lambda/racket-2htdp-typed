@@ -26,7 +26,7 @@
  2htdp/image
  ; 2.3.8 Image Predicates
  [#:opaque htdp:image image?]
- [#:opaque Color color?]
+ [#:struct Color color?]
  [#:opaque Pen pen?])
 
 ; provide capitalized predicates as well
