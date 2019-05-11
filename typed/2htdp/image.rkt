@@ -26,6 +26,7 @@
  mrlib/image-core
  [#:struct color ([red : Byte] [green : Byte] [blue : Byte] [alpha : Byte])
   #:type-name Color])
+(provide Color)
 
 (require/typed/provide
  2htdp/image
