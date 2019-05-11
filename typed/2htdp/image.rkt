@@ -23,10 +23,14 @@
 ;; ---------------------------------------------------------------------------------------------------
 
 (require/typed/provide
+ mrlib/image-core
+ [#:struct color ([red : Byte] [green : Byte] [blue : Byte] [alpha : Byte])
+  #:type-name Color])
+
+(require/typed/provide
  2htdp/image
  ; 2.3.8 Image Predicates
  [#:opaque htdp:image image?]
- [#:opaque Color color?]
  [#:opaque Pen pen?])
 
 ; provide capitalized predicates as well
@@ -120,7 +124,6 @@
  ; 2.3.8 Image Predicates
  [mode? (Any -> Boolean)]
  [image-color? (Any -> Boolean)]
- [color ((Byte Byte Byte) (Byte) . ->* . Color)]
  [make-color ((Byte Byte Byte) (Byte) . ->* . Color)]
  [y-place? (Any -> Boolean)]
  [x-place? (Any -> Boolean)]
