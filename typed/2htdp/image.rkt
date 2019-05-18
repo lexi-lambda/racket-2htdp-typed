@@ -33,6 +33,7 @@
 (provide
  (rename-out [color? Color?]
              [pen? Pen?]))
+(provide Color color-red color-green color-blue color-alpha)
 
 ;; simple exports
 ;; ---------------------------------------------------------------------------------------------------
@@ -122,6 +123,10 @@
  [image-color? (Any -> Boolean)]
  [color ((Byte Byte Byte) (Byte) . ->* . Color)]
  [make-color ((Byte Byte Byte) (Byte) . ->* . Color)]
+ [color-red (Color . -> . Byte)]
+ [color-green (Color . -> . Byte)]
+ [color-blue (Color . -> . Byte)]
+ [color-alpha (Color . -> . Byte)]
  [y-place? (Any -> Boolean)]
  [x-place? (Any -> Boolean)]
  [angle? (Any -> Boolean)]
